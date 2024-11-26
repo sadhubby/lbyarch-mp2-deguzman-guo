@@ -17,4 +17,5 @@ Next, run `run.bat`. This automatically runs the assembling and compiling comman
 ## Notes
 For now, there are fixed values. If you want to change the values, open `MP2_cfile.c` then change the values accordingly. If you want to increase or decrease, please make sure the elements of the vectors correspond to the vector size. 
 More comments found in the C file. 
-
+Furthermore, if you would like to check for validity of the dot product entirely, visit this website https://www.calculatorsoup.com/calculators/algebra/dot-product-calculator.php 
+Just copy paste the elements of the vectors
