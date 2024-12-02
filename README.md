@@ -32,6 +32,7 @@ In this section, the time analysis will be discussed. To acquire the time it too
     double time_asm = (double)(end - start) / CLOCKS_PER_SEC;
     ```
 The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The findings come out as such.
+
 For vector size n = 2<sup>20</sup> the average execution time for C was 0.00295 seconds, while the average execution time for ASM was 0.0009 seconds.
 For vector size n = 2<sup>24</sup> the average execution time for C was 0.0462 seconds, while the average execution time for ASM was 0.0127 seconds.
 For vector size n = 2<sup>30</sup> the average execution time for C was 2.9497 seconds, while the average execution time for ASM was 0.80965 seconds.
