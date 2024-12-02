@@ -25,4 +25,11 @@ To reiterate, the project is about calculating the dot product. The dot product 
 
 ## Time Analysis
 
-In this section, the time analysis will be discussed. To acquire the time it took to run the kernels of both C and ASM, the <time.h> library was utilized. 
+In this section, the time analysis will be discussed. To acquire the time it took to run the kernels of both C and ASM, the <time.h> library was utilized. Furthermore the time was given a double datatype to give further precision in the time it took to run. This was implemented in this way. 
+    ```
+    start = clock();
+    result_asm = dot_product_asm(n, A, B);
+    end = clock();
+    double time_asm = (double)(end - start) / CLOCKS_PER_SEC;
+    ```
+The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The findings come out as such.
