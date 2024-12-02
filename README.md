@@ -42,16 +42,25 @@ The program was ran with the different vector sizes and vector elements. Further
 # Performance Results 
 
 1. Vector size n = 2<sup>20</sup>:
+
    C Kernel: Average execution time = 0.00295 seconds
+   
    ASM Kernel: Average execution time = 0.0009 seconds
    
+   
 2. Vector size n = 2<sup>24</sup>:
+
    C Kernel: Average execution time = 0.0462 seconds
+   
    ASM Kernel: Average execution time = 0.0127 seconds
+   
 
 3. Vector size n = 2<sup>30</sup>:
+
    C Kernel: Average execution time = 2.9497 seconds
+   
    ASM Kernel: Average execution time = 0.80965 seconds
+   
 
 # Observations
 
