@@ -19,7 +19,10 @@ More comments found in the C file.
 Furthermore, if you would like to check for validity of the dot product entirely, visit this website https://www.calculatorsoup.com/calculators/algebra/dot-product-calculator.php.
 Just copy paste the elements of the vectors and calculate in the site.
 
-## Code Analysis
+# Code Analysis
 
 To reiterate, the project is about calculating the dot product. The dot product is calculated as such $$\sum_{i=1}^{n} a_i*b_i$$. In words, it means that the dot product is the summation of all elements in a Vector A multiplied with all corresponding elements in Vector B. In the scenario of the code, it was decided upon that the elements of our vector will be the same elements instead of random elements per run. As it was required, the number of elements must be from 2<sup>10</sup>, 2<sup>20</sup>, and if possible 2<sup>30</sup>. With this information, the elements of both vectors rely on the size of the vector. Vector A will consist of elements [1, 2, 3, ..., n] while Vector B will consist of elements [n, n-1, n-2, ..., 1]. With this, the initilization of necessary information such as vector size and vector elements are complete.
 
+## Time Analysis
+
+In this section, the time analysis will be discussed. To acquire the time it took to run the kernels of both C and ASM, the <time.h> library was utilized. 
