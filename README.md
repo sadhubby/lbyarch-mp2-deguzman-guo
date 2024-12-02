@@ -20,7 +20,7 @@ Furthermore, if you would like to check for validity of the dot product entirely
 
 # Code Analysis
 
-To reiterate, the project is about calculating the dot product. The dot product is calculated as such $$\sum_{i=1}^{n} a_i*b_i$$. In words, it means that the dot product is the summation of all elements in a Vector A multiplied with all corresponding elements in Vector B. In the scenario of the code, it was decided upon that the elements of our vector will be the same elements instead of random elements per run. As it was required, the number of elements must be from 2<sup>10</sup>, 2<sup>20</sup>, and if possible 2<sup>30</sup>. With this information, the elements of both vectors rely on the size of the vector. Vector A will consist of elements [1, 2, 3, ..., n] while Vector B will consist of elements [n, n-1, n-2, ..., 1]. With this, the initilization of necessary information such as vector size and vector elements are complete.
+To reiterate, the project is about calculating the dot product. The dot product is calculated as such $$\sum_{i=1}^{n} a_i*b_i$$. In words, it means that the dot product is the summation of all elements in a Vector A multiplied with all corresponding elements in Vector B. In the scenario of the code, it was decided upon that the elements of our vector will be the same elements instead of random elements per run. As it was required, the number of elements must be from 2<sup>20</sup>, 2<sup>24</sup>, and if possible 2<sup>30</sup>. With this information, the elements of both vectors rely on the size of the vector. Vector A will consist of elements [1, 2, 3, ..., n] while Vector B will consist of elements [n, n-1, n-2, ..., 1]. With this, the initilization of necessary information such as vector size and vector elements are complete.
 
 ## Time Analysis
 
@@ -32,3 +32,6 @@ In this section, the time analysis will be discussed. To acquire the time it too
     double time_asm = (double)(end - start) / CLOCKS_PER_SEC;
     ```
 The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The findings come out as such.
+For vector size n = 2<sup>20</sup> the average execution time for C was 0.00295 seconds, while the average execution time for ASM was 0.0009 seconds.
+For vector size n = 2<sup>24</sup> the average execution time for C was 0.0462 seconds, while the average execution time for ASM was 0.0127 seconds.
+For vector size n = 2<sup>30</sup> the average execution time for C was 2.9497 seconds, while the average execution time for ASM was 0.80965 seconds.
