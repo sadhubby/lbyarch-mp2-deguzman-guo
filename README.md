@@ -11,7 +11,13 @@ MP2_cfile contains essentially the "front-end" of the project. It also contains 
 
 ## To run
 Firstly, store all the files in a single directory. 
-Next, run `run.bat`. This automatically runs the assembling and compiling command lines to connect C and x86 ASM. Afterwards, click on the directory address of File Explorer, type `cmd` then type `MP2_cfile.exe` and it should run automatically.
+Next, run open CMD of the directory and type the following commands:
+
+nasm -f win64 MP2_asmfile.asm
+gcc -c MP2_cfile.c -o MP2_cfile.obj -m64
+gcc MP2_cfile.obj MP2_asmfile.obj -o MP2_cfile.exe -m64 
+
+This automatically runs the assembling and compiling command lines to connect C and x86 ASM. Afterwards, click on the directory address of File Explorer, type `cmd` then type `MP2_cfile.exe` and it should run automatically.
 
 ## Notes
 For now, there are fixed values. If you want to change the values, open `MP2_cfile.c` then change the values accordingly. If you want to increase or decrease, please make sure the elements of the vectors correspond to the vector size. 
