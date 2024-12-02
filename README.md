@@ -28,7 +28,7 @@ To reiterate, the project is about calculating the dot product. The dot product 
 
 ![image](https://github.com/user-attachments/assets/7d1dbbee-1633-4c52-88ad-6c55528b41fc)
 
-## Time Analysis
+# Time Analysis
 
 In this section, the time analysis will be discussed. To acquire the time it took to run the kernels of both C and ASM, the <time.h> library was utilized. Furthermore the time was given a double datatype to give further precision in the time it took to run. This was implemented in this way. 
     ```
@@ -39,7 +39,7 @@ In this section, the time analysis will be discussed. To acquire the time it too
     ```
 The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The processor of the device that was used to run the program is an AMD ryzen 5600. The findings come out as such.
 
-# Performance Results 
+## Performance Results 
 
 1. Vector size n = 2<sup>20</sup>:
 
@@ -62,10 +62,10 @@ The program was ran with the different vector sizes and vector elements. Further
    ASM Kernel: Average execution time = 0.80965 seconds
    
 
-# Observations
+## Observations
 
 The analysis reveals that as vector size increases, the execution time for both the C and ASM kernels grows significantly. However, the ASM kernel consistently outperforms the C implementation, achieving notable differences in speeds across all tested vector sizes. This performance advantage is due to the highly optimized nature of assembly code, which can exploit processor-specific features like SIMD instructions and minimize overhead. These results highlight the efficiency of ASM, particularly for large-scale computations, where its reduced execution time makes it a valuable choice for performance-critical applications.
 
-## Video Explaination and Demonstration
+# Video Explaination and Demonstration
 
 https://youtu.be/0n_gEHMZ5Ko
