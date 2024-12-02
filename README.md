@@ -5,7 +5,6 @@ This is the LBYARCH machine project of De Guzman and Guo. This simulates a vecto
 ## Files
 1. MP2_cfile.c
 2. MP2_asmfile.asm
-3. run.bat
 
 MP2_cfile contains essentially the "front-end" of the project. It also contains the external function prototype for assembly and function for calculating dot product within C. MP2_asmfile contains the "back-end" for calculating a double floating point for dot product.
 
