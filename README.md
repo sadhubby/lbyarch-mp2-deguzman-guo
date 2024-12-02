@@ -22,6 +22,8 @@ Furthermore, if you would like to check for validity of the dot product entirely
 
 To reiterate, the project is about calculating the dot product. The dot product is calculated as such $$\sum_{i=1}^{n} a_i*b_i$$. In words, it means that the dot product is the summation of all elements in a Vector A multiplied with all corresponding elements in Vector B. In the scenario of the code, it was decided upon that the elements of our vector will be the same elements instead of random elements per run. As it was required, the number of elements must be from 2<sup>20</sup>, 2<sup>24</sup>, and if possible 2<sup>30</sup>. With this information, the elements of both vectors rely on the size of the vector. Vector A will consist of elements [1, 2, 3, ..., n] while Vector B will consist of elements [n, n-1, n-2, ..., 1]. With this, the initilization of necessary information such as vector size and vector elements are complete.
 
+![image](https://github.com/user-attachments/assets/94d80225-4834-47f5-993c-ef802e5b6b47)
+
 ## Time Analysis
 
 In this section, the time analysis will be discussed. To acquire the time it took to run the kernels of both C and ASM, the <time.h> library was utilized. Furthermore the time was given a double datatype to give further precision in the time it took to run. This was implemented in this way. 
