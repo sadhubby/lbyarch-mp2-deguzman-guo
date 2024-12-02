@@ -22,7 +22,11 @@ Furthermore, if you would like to check for validity of the dot product entirely
 
 To reiterate, the project is about calculating the dot product. The dot product is calculated as such $$\sum_{i=1}^{n} a_i*b_i$$. In words, it means that the dot product is the summation of all elements in a Vector A multiplied with all corresponding elements in Vector B. In the scenario of the code, it was decided upon that the elements of our vector will be the same elements instead of random elements per run. As it was required, the number of elements must be from 2<sup>20</sup>, 2<sup>24</sup>, and if possible 2<sup>30</sup>. With this information, the elements of both vectors rely on the size of the vector. Vector A will consist of elements [1, 2, 3, ..., n] while Vector B will consist of elements [n, n-1, n-2, ..., 1]. With this, the initilization of necessary information such as vector size and vector elements are complete.
 
-![image](https://github.com/user-attachments/assets/94d80225-4834-47f5-993c-ef802e5b6b47)
+![image](https://github.com/user-attachments/assets/341ea251-12d2-4cc4-a73b-bd339a4056f5)
+
+![image](https://github.com/user-attachments/assets/23a19b7c-7f98-4598-a976-8a7713dabfad)
+
+![image](https://github.com/user-attachments/assets/7d1dbbee-1633-4c52-88ad-6c55528b41fc)
 
 ## Time Analysis
 
@@ -33,11 +37,26 @@ In this section, the time analysis will be discussed. To acquire the time it too
     end = clock();
     double time_asm = (double)(end - start) / CLOCKS_PER_SEC;
     ```
-The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The processor of the device that was used to run the program is a ryzen 5600. The findings come out as such.
+The program was ran with the different vector sizes and vector elements. Furthermore, the program was ran 20 times to get the average running time. The processor of the device that was used to run the program is an AMD ryzen 5600. The findings come out as such.
 
-For vector size n = 2<sup>20</sup> the average execution time for C was 0.00295 seconds, while the average execution time for ASM was 0.0009 seconds.
+# Performance Results 
 
-For vector size n = 2<sup>24</sup> the average execution time for C was 0.0462 seconds, while the average execution time for ASM was 0.0127 seconds.
+1. Vector size n = 2<sup>20</sup>:
+   C Kernel: Average execution time = 0.00295 seconds
+   ASM Kernel: Average execution time = 0.0009 seconds
+   
+2. Vector size n = 2<sup>24</sup>:
+   C Kernel: Average execution time = 0.0462 seconds
+   ASM Kernel: Average execution time = 0.0127 seconds
 
-For vector size n = 2<sup>30</sup> the average execution time for C was 2.9497 seconds, while the average execution time for ASM was 0.80965 seconds.
+3. Vector size n = 2<sup>30</sup>:
+   C Kernel: Average execution time = 2.9497 seconds
+   ASM Kernel: Average execution time = 0.80965 seconds
 
+# Observations
+
+The analysis reveals that as vector size increases, the execution time for both the C and ASM kernels grows significantly. However, the ASM kernel consistently outperforms the C implementation, achieving notable differences in speeds across all tested vector sizes. This performance advantage is due to the highly optimized nature of assembly code, which can exploit processor-specific features like SIMD instructions and minimize overhead. These results highlight the efficiency of ASM, particularly for large-scale computations, where its reduced execution time makes it a valuable choice for performance-critical applications.
+
+## Video Explaination and Demonstration
+
+https://youtu.be/0n_gEHMZ5Ko
